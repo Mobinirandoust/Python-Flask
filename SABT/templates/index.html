@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="website icon" href="/static/IMG_20240207_195232.jpg">
+    <link rel="stylesheet" href="../static/style.css">
+    <meta charset="UTF-8">
+    <link rel="website icon" href="/static/IMG_20240207_195232.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short link sabt کوتاه کنند لینک ثبت</title>
+</head>
+<body>
+    <div class="formin">
+        <menu class="menu1">
+            <p>S-A-B-T</p>
+        </menu>
+    </div>
+    <div class="formin">
+    <form action="" method="POST">
+       در کادر پایین آدرس وبسایت خود را وارد کنید <br/>
+    <input type="url" name="val" value="http://"><br/>
+    <input type="submit" value="کوتاه کردن لینک"><br>
+        </form> </div>
+        <div class="formin2">
+    <h4>Your ShortLink</h4>
+     <p>http://127.0.0.1:5000/{{ key }} </p>
+
+     <h4> Your Website </h4> 
+     <p>{{ val }} </p>
+
+        {% if msg %}
+        {{ msg }}
+        {% else %}
+   <p> {{ 'پیغامی برای گزارش وجود ندارد '}} </p>
+    {% endif %}
+    </div>
+
+    
+    <div>
+        <p class="info-down">این خدمات کاملا رایگان است و برای هرکسی که می خواهد آدرس سایت خود را کوتاه کند مورد استفاده قرار می گیرد</p>
+    </div>
+    <div >
+     <b>  <p style="color: rgb(0, 0, 0); cursor: default; margin: 5px; background-color: aliceblue; width: 180px;font-size: large;">Powered with Mobin_irandoust</p> </b>
+    </div>
+</body>
+</html>
