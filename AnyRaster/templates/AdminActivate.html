@@ -1,0 +1,55 @@
+{% extends 'base.html'%}
+
+{% block t %} Admin {% endblock %}
+{% block body %}
+<style>
+    p,h2{color: white;}
+</style>
+<h2>
+    خوش آمدید مبین ایران دوست
+</h2>
+<br>
+<h4 style="color: aliceblue;">
+    <p style="text-align: left;font-size: 20px;">Landsat 7</p>
+    <table class="tabel_land7">
+    <tr>
+        <th>ID</th><th>Name</th><th>Code</th><th>Tel</th><th>Band 1</th><th>Band 2</th><th>Band 3</th><th>Band 4</th><th>Band 5</th><th>Band 6</th><th>Band 7</th><th>History</th><th>City</th><th>Date</th><th>Delete</th><th>Text Area</th>
+    </tr>
+        {% for me in user7%}
+   <tr>
+        <td>{{me.id}}</td><td>{{me.name}}</td><td>{{me.code}}</td><td>{{me.tel}}</td><td>{{me.band1}}</td><td>{{me.band2}}</td><td>{{me.band3}}</td><td>{{me.band4}}</td><td>{{me.band5}}</td><td>{{me.band6}}</td><td>{{me.band7}}</td><td>{{me.history}}</td><td>{{me.city}}</td><td>{{me.date}}</td><td><form action="/admin/delete7/" method="GET"><input type="text" name="id1" value="{{me.id}}"><input type="submit" value="حذف کردن"></form></td><td>{{me.takmili}}</td>
+   </tr>
+        {% endfor %}
+        </table>
+</h4>
+<br>
+<h4 style="color: aliceblue;">
+    <p style="text-align: left;font-size: 20px;">Landsat 8</p>
+    <table class="tabel_land7">
+    <tr>
+        <th>ID</th><th>Name</th><th>Code</th><th>Tel</th><th>Band 1</th><th>Band 2</th><th>Band 3</th><th>Band 4</th><th>Band 5</th><th>Band 6</th><th>Band 7</th><th>History</th><th>City</th><th>Date</th><th>Delete</th><th>Text Area</th>
+    </tr>
+        {% for me in user8%}
+   <tr>
+        <td>{{me.id}}</td><td>{{me.name}}</td><td>{{me.code}}</td><td>{{me.tel}}</td><td>{{me.band1}}</td><td>{{me.band2}}</td><td>{{me.band3}}</td><td>{{me.band4}}</td><td>{{me.band5}}</td><td>{{me.band6}}</td><td>{{me.band7}}</td><td>{{me.history}}</td><td>{{me.city}}</td><td>{{me.date}}</td><td><form action="/admin/delete8/" method="GET"><input type="text" name="id1" value="{{me.id}}"><input type="submit" value="حذف کردن"></form></td><td>{{me.takmili}}</td>
+   </tr>
+        {% endfor %}
+        </table>
+</h4>
+<br>
+<h4 style="color: aliceblue;">
+    <p style="text-align: left;font-size: 20px;">Landsat 9</p>
+    <table class="tabel_land7">
+    <tr>
+        <th>ID</th><th>Name</th><th>Code</th><th>Tel</th><th>Band 1</th><th>Band 2</th><th>Band 3</th><th>Band 4</th><th>Band 5</th><th>Band 6</th><th>Band 7</th><th>History</th><th>City</th><th>Date</th><th>Delete</th><th>Text Area</th>
+    </tr>
+        {% for me in user9%}
+   <tr>
+        <td>{{me.id}}</td><td>{{me.name}}</td><td>{{me.code}}</td><td>{{me.tel}}</td><td>{{me.band1}}</td><td>{{me.band2}}</td><td>{{me.band3}}</td><td>{{me.band4}}</td><td>{{me.band5}}</td><td>{{me.band6}}</td><td>{{me.band7}}</td><td>{{me.history}}</td><td>{{me.city}}</td><td>{{me.date}}</td><td><form action="/admin/delete9/" method="GET"><input type="text" name="id1" value="{{me.id}}"><input type="submit" value="حذف کردن"></form></td><td>{{me.takmili}}</td>
+   </tr>
+        {% endfor %}
+        </table>
+</h4>
+
+
+{% endblock %}
