@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+<!-- / -->
+
+{% block title %}
+شبکه کلام محور - ثبت نام
+{% endblock %}
+  
+{% block body %}
+<p style="text-align:justify; background-color: rgb(0, 255, 85);font-size: large;">
+    مقدمه
+<b>
+    
+    <p style="text-align: justify; letter-spacing: 2px; font-size: 26px;background-color: rgba(72, 209, 205, 0.625);">
+        چرا کلام؟
+        کلام یک شبکه اجتماعی متن محور می باشد که ثبت نام آن رایگان است
+        ،کلام هیچگونه کوکی ذخیره نمی کند و کاملا خصوصی می باشد
+        ،چگونه ثبت نام کنیم؟
+        ثبت نام ابتدا با یه ایمیل و گذرواژه امکان پذیر است
+        ،بعد از ثبت نام به شما شناسه ای میدهد که میتوانید برای ورود به حساب از آن استفاده کنید
+        ،با شناسه میتوانید حذف حساب و تغییر حساب انجام دهید
+        ،برای ورود به حساب دو راه برای شما هست شناسه و گذرواژه یا ایمیل و گذرواژه
+        ،با شناسه می توانید کلام های خودتون با دوستان به اشتراک بزارید
+        ایمیل برای ثبت نام فقط جیمیل و یاهو است برای بازیابی ایمیل معتبر وارد کنید
+    </p>
+</b>
+</p>
+<form action="/" method="POST" class="form-code">
+        <h2>ثبت نام</h2>
+        <br>
+        <p >ثبت ایمیل <br><input type="email" name="email" placeholder="Gmail Yahoo ..."> </p>
+        <p >گذرواژه  <br><input type="password" name="password" placeholder="Hard:Zx@2inPL:)9" minlength="5" maxlength="100"> </p>
+        <p >نام و نام خانوادگی  <br><input type="text" name="name" placeholder="نام و نام خانوادگی خود را وارد کنید"> </p>
+        <input type="submit" value="ارسال" style="color: black;">
+        {% if report %}
+       <b> <p>{{ report }}</p> </b>
+        {% endif %}
+
+        {% if sh %}
+        <b> شناسه </b>
+        <p>{{ sh }} </p>
+        {% endif %}
+
+    </form>
+
+    {% endblock %}

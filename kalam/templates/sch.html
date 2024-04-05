@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalam</title>
+</head>
+<body>
+    <a href="/" style="font-size: 20px; text-decoration: none; color:red">بازگشت</a>
+    <div class="search">
+
+        <form action="/search/s/" method="post">
+            <input type="text" name="sabt" title="متن را وارد کنید" placeholder="متن را وارد کنید" value=""> 
+            <input type="submit" value="جست وجو"> 
+        </form>
+
+        </div>
+
+        <div>
+            
+            {% if msg %}
+            
+            {% for i in msg %}
+            <div style="background-color: rgb(3, 110, 240);color: aliceblue;width: 300px;display:inline-flexbox ;">
+                <p style='margin:2px; text-align: right;font-size: 25px;'>{{i.name}}</p>
+                    {{i.chat}}
+                </p>
+                <br>
+                <p class="">{{i.date}}</p>
+                <p class="" >{{i.tag}}</p>
+            </div>
+
+            {% endfor %}
+            {% endif %}
+            
+        </div>
+
+       
+</body>
+</html>

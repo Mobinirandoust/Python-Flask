@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <style>
+        body{
+            background-image: url('/static/img/gradient-dynamic-blue-lines-background_23-2148995756\ \(1\).jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 600px;
+        }
+    </style>
+    <link rel="website icon" href="/static/img/IMG_20240214_170152.jpg">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+    <menu type="context" class="context">
+        <div class="context-img"> 
+            <p>Kalam <img src="/static/img/IMG_20240214_170152.jpg" alt="Sorry,for this image" width="100px" height="100px"></p>
+        </div>
+        <li><a href="/">ثبت نام</a></li>
+        <li><a href="/Login">ورود به حساب</a></li>
+        <li><a href="/change_account">تغییر حساب</a></li>
+        <li><a href="/delete_email">حذف حساب</a></li>
+    </menu>
+    {% block body %} 
+    
+    {% endblock %}
+</body>
+
+<div class="foot">
+    <a onclick="alert('khatati@telegmail.com   -   09111111111')" style="cursor: pointer; color: bisque;">پشتیبانی</a>
+    <a style="cursor: pointer; color: bisque;" href="/search/s/" >جست و جو</a>
+    <a href="/new/kalam">جدیدترین کلام</a>
+</div>
+
+</html>

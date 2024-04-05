@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+<!-- /change_account -->
+
+{% block title %}
+شبکه کلام محور - به روزرسانی حساب 
+{% endblock %}
+  
+{% block body %} 
+
+<form action="/change_account" method="POST" class="form-code">
+    <h2>تغییر حساب</h2>
+    <p >شناسه <br><input type="text" name="code" placeholder="123256"> </p>
+    <p > ایمیل <br><input type="email" name="email" placeholder="Gmail Yahoo ..."> </p>
+    <p > گذرواژه<br><input type="password" name="password" placeholder="Hard:Zx@2inPL:)"> </p>
+    <br>
+    <p > ایمیل جدید <br><input type="email" name="new_email" placeholder="Gmail Yahoo ..."> </p>
+    <p > گذرواژه جدید<br><input type="password" name="newpass" placeholder="Hard:Zx@2inPL:)"> </p>
+    <input type="submit" value="ارسال">
+    {% if report %}
+    <p>{{ report }}</p>
+    {% endif %}
+</form>
+
+{% endblock %}

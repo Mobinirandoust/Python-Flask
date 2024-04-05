@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+<!-- /Login -->
+
+{% block title %}
+شبکه کلام محور - ورود کاربر
+{% endblock %}
+  
+{% block body %} 
+    <form action="/Login/email" method="post" class="form-email">
+        <h2>ورود به حساب</h2>
+        <p class="form-p-valid"> ایمیل <br><input type="email" name="email" placeholder="Your Email"> </p>
+        <p class="form-p-valid"> گذرواژه<br><input type="password" name="password" placeholder="Hard:Zx@2inPL:)"> </p>
+        <input type="submit" value="ارسال" style="color: black;">
+    </form>
+    
+     <form action="/Login/code" method="post" class="form-code">
+        <p class="form-p-valid"> شناسه <br><input type="text" name="code" placeholder="شناسه"> </p>
+        <p class="form-p-valid"> گذرواژه<br><input type="password" name="password" placeholder="Hard:Zx@2inPL:)"> </p>
+        <input type="submit" value="ارسال"  style="color: black;">
+    </form>
+    {% if report %}
+    <h2>{{report}}</h2>
+    {% endif %}
+{% endblock %}

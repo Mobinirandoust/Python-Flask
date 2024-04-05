@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+<!-- /delete_email -->
+
+{% block title %}
+شبکه کلام محور - حذف حساب
+{% endblock %}
+  
+{% block body %} 
+
+<form action="/delete_email" method="POST" class="form-code">
+    <h2>حذف حساب</h2>
+    <p >شناسه <br><input type="text" name="code" placeholder="987800"> </p>
+    <p > ایمیل <br><input type="email" name="email" placeholder="Gmail Yahoo ..."> </p>
+    <p > گذرواژه<br><input type="password" name="password" placeholder="Hard:Zx@2inPL:)"> </p>
+    <input type="submit" value="ارسال">
+    {% if report %}
+    <p>{{ report }}</p>
+    {% endif %}
+</form>
+
+{% endblock %}
