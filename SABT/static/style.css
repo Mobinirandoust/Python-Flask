@@ -1,24 +1,59 @@
-
-.menu1 {    
-    letter-spacing: 10px;background-color: rgb(21, 169, 177);color: aliceblue; }
-.menu1 {    width: auto; height: auto;}
+/* بخش اصلی که برای هر دو حالت استفاده می‌شود */
 .menu1 {
-    text-align: center; cursor: pointer;}
-.formin {
-    font-size: large; text-align: center;color: aliceblue;}
-.formin {
-    font-size: 20px; }
-.formin2 {
-    font-size: large; text-align: center; font-family:fantasy}
-.formin2 {
-    font-size: 20px; background-color: rgb(255, 255, 255); }
-
-body{    background-image: url(back.jpg);background-size: contain;background-clip: padding-box;}
-
-@font-face {
-    font-family: nazanin;
-    src: url(Mj_Freehand.ttf);
+    letter-spacing: 10px;
+    background-color: rgb(21, 169, 177);
+    color: aliceblue;
+    text-align: center;
+    cursor: pointer;
 }
 
-.info-down {text-align: right;color: wheat;margin-right: 10px;}
-input {width: 200px;height: 30px;}
+.formin, .formin2 {
+    text-align: center;
+}
+
+.formin {
+    font-size: 20px;
+    font-size: large; /* برای موبایل */
+    color: aliceblue; /* برای موبایل */
+}
+
+.formin2 {
+    font-size: 20px;
+    font-size: large; /* برای موبایل */
+    font-family: fantasy; /* برای موبایل */
+    background-color: rgb(255, 255, 255); /* برای موبایل */
+}
+
+/* Media Query برای موبایل */
+@media only screen and (max-width: 768px) {
+    .menu1 {
+        letter-spacing: 5px; /* تغییر فاصله حروف برای موبایل */
+        width: auto; /* تغییر عرض منو برای موبایل */
+        height: auto; /* تغییر ارتفاع منو برای موبایل */
+        font-size: small; /* تغییر اندازه فونت منو برای موبایل */
+    }
+
+    .formin, .formin2 {
+        font-size: medium; /* تغییر اندازه فونت فرم‌ها برای موبایل */
+    }
+
+    input {
+        width: 150px; /* تغییر عرض input برای موبایل */
+        height: 25px; /* تغییر ارتفاع input برای موبایل */
+    }
+}
+
+/* Media Query برای کامپیوتر */
+@media only screen and (min-width: 769px) {
+    body {
+        background-image: url(back.jpg);
+        background-size: contain;
+        background-clip: padding-box;
+    }
+
+    .info-down {
+        text-align: right;
+        color: wheat;
+        margin-right: 10px;
+    }
+}
