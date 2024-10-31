@@ -4,3 +4,5 @@
 <br/>
 English:
 Simple and medium projects written with Python and Flask framework are located in this repository.
+
+این مجموعه اولین پروژه هایم است که بدنه تجربیات منو نشان میدهد
